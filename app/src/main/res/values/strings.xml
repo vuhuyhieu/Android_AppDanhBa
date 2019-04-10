@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">projectDanhBa_20135557</string>
+    <string name="app_title">Danh Bạ</string>
+    <string name="trang_chu">Tranng chủ</string>
+    <string name="btn_action_ok">OK</string>
+    <string name="btn_action_cancel">Cancel</string>
+    <string name="btn_action_add">Thêm mới</string>
+    <string name="btn_action_search">Tìm kiếm</string>
+    <string name="btn_action_settings">Cài đặt</string>
+    <string name="btn_action_like">Thích</string>
+    <string name="btn_action_unlike">Bỏ thích</string>
+</resources>
