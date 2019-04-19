@@ -3,13 +3,7 @@ package com.example.model;
 import java.io.Serializable;
 
 public class DanhBa implements Serializable {
-    public int getMaDanhBa() {
-        return maDanhBa;
-    }
 
-    public void setMaDanhBa(int maDanhBa) {
-        this.maDanhBa = maDanhBa;
-    }
 
     public String getHoTen() {
         return hoTen;
@@ -43,18 +37,21 @@ public class DanhBa implements Serializable {
         this.thich = thich;
     }
 
-    private int maDanhBa;
     private String hoTen;
     private String soDienThoai;
     private String nhom;
     private boolean thich;
 
-    public DanhBa(int maDanhBa, String hoTen, String soDienThoai, String nhom, boolean thich) {
-        this.maDanhBa = maDanhBa;
+    public DanhBa(String hoTen, String soDienThoai, String nhom, boolean thich){
         this.hoTen = hoTen;
         this.soDienThoai = soDienThoai;
         this.nhom = nhom;
         this.thich = thich;
+    }
+
+    public DanhBa (String hoTen, String soDienThoai){
+        this.hoTen = hoTen;
+        this.soDienThoai = soDienThoai;
     }
 
     public DanhBa(){

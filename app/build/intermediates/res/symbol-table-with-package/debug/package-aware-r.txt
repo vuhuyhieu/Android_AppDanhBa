@@ -1002,6 +1002,9 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_add_24dp
 drawable ic_app
+drawable ic_avartar_96dp
+drawable ic_avatar_24dp
+drawable ic_check_24dp
 drawable ic_circled_a_48dp
 drawable ic_circled_a_96dp
 drawable ic_contact_24dp
@@ -1010,11 +1013,13 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like_24dp
 drawable ic_message_24dp
+drawable ic_more_vert_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_phone_24dp
 drawable ic_search_24dp
+drawable ic_search_black_24dp
 drawable ic_threedot_24dp
 drawable ic_unlike_24dp
 drawable ic_videocall_24dp
@@ -1072,9 +1077,14 @@ id blocking
 id bottom
 id btn_action_add
 id btn_action_call
-id btn_action_send_message
-id btn_action_video_call
+id btn_action_create
+id btn_action_search
+id btn_action_show_more
+id btn_action_take_photo
+id btn_go_back
 id buttonPanel
+id cboIsChecked
+id cboUaThich
 id center
 id center_horizontal
 id center_vertical
@@ -1104,6 +1114,9 @@ id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id etHoTen
+id etNhom
+id etSoDienThoai
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1165,8 +1178,7 @@ id radio
 id right
 id right_icon
 id right_side
-id rvDanhBa
-id rvLichSu
+id rvDAnhBa
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1238,6 +1250,7 @@ id txtHoTen
 id txtHoTen_item
 id txtNhom
 id txtSoDienThoai
+id txtTaoLienHe
 id uniform
 id unlabeled
 id up
@@ -1294,8 +1307,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_new_contact
 layout activity_details
-layout activity_details2
 layout activity_main
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1324,6 +1337,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu main_menu
 mipmap ic_app
 mipmap ic_launcher
 mipmap ic_launcher_round

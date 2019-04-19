@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Lenovo\\Desktop\\Android_AppDanhBa\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Public\\projectDanhBa_20135557\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\a67bae37a6c3f9a02166600d3f2f93ed\\res\\values\\values.xml",
@@ -23,22 +23,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\Desktop\\Android_AppDanhBa\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\Public\\projectDanhBa_20135557\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,57,105",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "198,99,151"
                     },
                     "to": {
-                        "startLines": "599",
-                        "startColumns": "4",
-                        "startOffsets": "37096",
-                        "endLines": "604",
-                        "endColumns": "12",
-                        "endOffsets": "37410"
+                        "startLines": "192,193,194",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "9973,10019,10066",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "10014,10061,10112"
                     }
                 },
                 {
@@ -80,37 +78,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\Desktop\\Android_AppDanhBa\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\Public\\projectDanhBa_20135557\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "157,57,105",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "198,99,151"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
                     },
                     "to": {
-                        "startLines": "192,193,194",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "9973,10019,10066",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "10014,10061,10112"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\Desktop\\Android_AppDanhBa\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,2,6,5,9,4,7,8,10,3",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "17,78,275,221,441,175,328,384,492,125",
-                        "endColumns": "59,45,51,52,49,44,54,55,54,48",
-                        "endOffsets": "72,119,322,269,486,215,378,435,542,169"
-                    },
-                    "to": {
-                        "startLines": "565,566,569,570,571,572,573,574,575,589",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "33910,33970,34297,34349,34402,34452,34497,34552,34608,36328",
-                        "endColumns": "59,45,51,52,49,44,54,55,54,48",
-                        "endOffsets": "33965,34011,34344,34397,34447,34492,34547,34603,34658,36372"
+                        "startLines": "599",
+                        "startColumns": "4",
+                        "startOffsets": "37096",
+                        "endLines": "604",
+                        "endColumns": "12",
+                        "endOffsets": "37410"
                     }
                 },
                 {
@@ -187,6 +170,23 @@
                         "endLines": "236,237,336,337,338,339,340,341,342,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,473,474,482,483,495,496,497,498,499,503,525,588,2281,2285,2286,2290,2291,2653,2654,3721,3921,3953,3991,3998",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "12849,12912,19675,19743,19815,19885,19946,20020,20093,26978,27039,27101,27165,27227,27288,27356,27456,27516,27582,27655,27724,27781,27833,27895,28420,28496,28876,28911,29501,29562,29619,29653,29688,29866,31147,36323,149406,149607,149717,149918,150047,174325,174392,235600,253848,255913,257875,258252"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Public\\projectDanhBa_20135557\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,2,6,5,9,4,7,8,10,3",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "17,78,275,221,441,175,328,384,492,125",
+                        "endColumns": "59,45,51,52,49,44,54,55,54,48",
+                        "endOffsets": "72,119,322,269,486,215,378,435,542,169"
+                    },
+                    "to": {
+                        "startLines": "565,566,569,570,571,572,573,574,575,589",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "33910,33970,34297,34349,34402,34452,34497,34552,34608,36328",
+                        "endColumns": "59,45,51,52,49,44,54,55,54,48",
+                        "endOffsets": "33965,34011,34344,34397,34447,34492,34547,34603,34658,36372"
                     }
                 },
                 {

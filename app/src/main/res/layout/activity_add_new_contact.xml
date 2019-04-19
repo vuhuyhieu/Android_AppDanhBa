@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewContactActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_dialog"
+            />
+        <TextView
+            android:id="@+id/txtTaoLienHe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tạo liên hệ"
+            android:textSize="18sp"
+            android:gravity="fill_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btn_action_create"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_check_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center|center_horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_action_take_photo"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:backgroundTint="@android:color/holo_blue_light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Họ và tên"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etSoDienThoai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Số điện thoại"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/etNhom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nhóm"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/cboUaThich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ưa thích" />
+
+    </LinearLayout>
+</LinearLayout>

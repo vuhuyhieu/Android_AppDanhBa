@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.model.DanhBa;
@@ -33,6 +34,9 @@ public class DanhBaAdapter extends ArrayAdapter<DanhBa> {
         View row = inflater.inflate(this.resource,null);
         ImageView imgAvatar = row.findViewById(R.id.imgAvatar);
         TextView txtHoTen_item = row.findViewById(R.id.txtHoTen_item);
+        CheckBox cboIsChecked = row.findViewById(R.id.cboIsChecked);
+        cboIsChecked.setVisibility(View.INVISIBLE);
+        imgAvatar.setImageResource(R.drawable.ic_avatar_24dp);
         final DanhBa ct = this.objects.get(position);
         txtHoTen_item.setText(ct.getHoTen());
         return row;

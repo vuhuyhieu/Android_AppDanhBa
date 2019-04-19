@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDanhBa"
+        android:id="@+id/rvDAnhBa"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_action_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_24dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:clickable="true"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"/>
-</LinearLayout>
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:clickable="true"
+        android:src="@drawable/ic_add_24dp"
+        app:backgroundTint="@color/design_default_color_primary"
+        app:layout_anchor="@id/rvDAnhBa"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
