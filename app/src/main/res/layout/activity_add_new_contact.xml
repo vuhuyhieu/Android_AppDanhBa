@@ -17,10 +17,10 @@
             android:src="@android:drawable/btn_dialog"
             />
         <TextView
-            android:id="@+id/txtTaoLienHe"
+            android:id="@+id/textViewAddContact"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Tạo liên hệ"
+            android:text="@string/create_contact"
             android:textSize="18sp"
             android:gravity="fill_vertical"
             android:layout_margin="10dp"
@@ -41,7 +41,7 @@
         android:gravity="center|center_horizontal">
 
         <ImageButton
-            android:id="@+id/btn_action_take_photo"
+            android:id="@+id/buttonTakePhoto"
             android:layout_width="66dp"
             android:layout_height="66dp"
             android:src="@android:drawable/ic_menu_camera"
@@ -54,34 +54,33 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/etHoTen"
+            android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Họ và tên"
+            android:hint="@string/full_name"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etSoDienThoai"
+            android:id="@+id/editTextPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Số điện thoại"
+            android:hint="@string/phone_number"
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/etNhom"
+            android:id="@+id/editTextGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Nhóm"
+            android:hint="@string/group"
             android:inputType="textPersonName" />
 
         <CheckBox
-            android:id="@+id/cboUaThich"
+            android:id="@+id/checkBoxLike"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ưa thích" />
-
+            android:text="@string/like" />
     </LinearLayout>
 </LinearLayout>

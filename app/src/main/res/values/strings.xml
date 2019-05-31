@@ -7,6 +7,14 @@
     <string name="btn_action_add">Thêm mới</string>
     <string name="btn_action_search">Tìm kiếm</string>
     <string name="btn_action_settings">Cài đặt</string>
-    <string name="btn_action_like">Thích</string>
+    <string name="like">Thích</string>
     <string name="btn_action_unlike">Bỏ thích</string>
+    <string name="add_new_contact">Thêm liên hệ mới trong danh bạ</string>
+    <string name="search_contact">Tìm kiếm liên hệ</string>
+    <string name="create_contact">Tạo liên hệ mới</string>
+    <string name="first_name">Họ</string>
+    <string name="last_name">Tên</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="group">Nhóm</string>
 </resources>

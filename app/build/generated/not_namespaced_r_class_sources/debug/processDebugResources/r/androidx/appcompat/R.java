@@ -643,7 +643,7 @@ public final class R {
         public static final int async = 0x7f08001d;
         public static final int blocking = 0x7f080021;
         public static final int bottom = 0x7f080022;
-        public static final int buttonPanel = 0x7f08002a;
+        public static final int buttonPanel = 0x7f080029;
         public static final int checkbox = 0x7f080031;
         public static final int chronometer = 0x7f080032;
         public static final int content = 0x7f080037;
@@ -652,8 +652,8 @@ public final class R {
         public static final int customPanel = 0x7f08003b;
         public static final int decor_content_parent = 0x7f08003c;
         public static final int default_activity_button = 0x7f08003d;
-        public static final int edit_query = 0x7f080046;
-        public static final int end = 0x7f080047;
+        public static final int edit_query = 0x7f080049;
+        public static final int end = 0x7f08004a;
         public static final int expand_activities_button = 0x7f08004e;
         public static final int expanded_menu = 0x7f08004f;
         public static final int forever = 0x7f080055;
@@ -680,9 +680,9 @@ public final class R {
         public static final int progress_circular = 0x7f080084;
         public static final int progress_horizontal = 0x7f080085;
         public static final int radio = 0x7f080086;
-        public static final int right = 0x7f080087;
-        public static final int right_icon = 0x7f080088;
-        public static final int right_side = 0x7f080089;
+        public static final int right = 0x7f080088;
+        public static final int right_icon = 0x7f080089;
+        public static final int right_side = 0x7f08008a;
         public static final int screen = 0x7f08008e;
         public static final int scrollIndicatorDown = 0x7f080090;
         public static final int scrollIndicatorUp = 0x7f080091;
@@ -715,12 +715,12 @@ public final class R {
         public static final int text2 = 0x7f0800ba;
         public static final int textSpacerNoButtons = 0x7f0800bb;
         public static final int textSpacerNoTitle = 0x7f0800bc;
-        public static final int time = 0x7f0800c2;
-        public static final int title = 0x7f0800c3;
-        public static final int titleDividerNoCustom = 0x7f0800c4;
-        public static final int title_template = 0x7f0800c5;
-        public static final int top = 0x7f0800c6;
-        public static final int topPanel = 0x7f0800c7;
+        public static final int time = 0x7f0800c7;
+        public static final int title = 0x7f0800c8;
+        public static final int titleDividerNoCustom = 0x7f0800c9;
+        public static final int title_template = 0x7f0800ca;
+        public static final int top = 0x7f0800cb;
+        public static final int topPanel = 0x7f0800cc;
         public static final int uniform = 0x7f0800d3;
         public static final int up = 0x7f0800d5;
         public static final int wrap_content = 0x7f0800db;
@@ -818,8 +818,8 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f0e0024;
         public static final int abc_shareactionprovider_share_with_application = 0x7f0e0025;
         public static final int abc_toolbar_collapse_description = 0x7f0e0026;
-        public static final int search_menu_title = 0x7f0e003d;
-        public static final int status_bar_notification_info_overflow = 0x7f0e003e;
+        public static final int search_menu_title = 0x7f0e0045;
+        public static final int status_bar_notification_info_overflow = 0x7f0e0046;
     }
     public static final class style {
         private style() {}

@@ -1,59 +1,45 @@
 package com.example.projectdanhba_20135557;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.loader.content.CursorLoader;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.icu.text.UnicodeSetSpanner;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.QuickContactBadge;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.example.adapter.DanhBaAdapter;
-import com.example.adapter.DanhBaAdapterRecycleView;
-import com.example.model.DanhBa;
+import com.example.adapter.ContactAdapter;
+import com.example.model.Contact;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity  {
-    ArrayList<DanhBa> arrDanhBa;
+    ArrayList<Contact> listContact;
     LinearLayoutManager layoutManager;
-    RecyclerView rvDanhBa;
-    DanhBaAdapterRecycleView adapterDanhBa;
-    FloatingActionButton btn_action_add;
-    public static final String MACT = "mact";
-    public static final String HOTEN = "hoten";
-    public static final String SODIENTHOAI = "sodienthoai";
-    public static final String NHOM = "nhom";
-    public static final String THICH = "thich";
+    RecyclerView recyclerViewContact;
+    ContactAdapter contactAdapter;
+    FloatingActionButton buttonAddNewContact;
+//    public static final String MACT = "mact";
+    public static final String NAME = "hoten";
+    public static final String PHONE_NUMBER = "sodienthoai";
+    public static final String GROUP = "nhom";
+    public static final String LIKE = "thich";
     public static final String BUNDLE = "bundle";
 
     @Override
@@ -71,7 +57,7 @@ public class MainActivity extends AppCompatActivity  {
 
         MenuItem searchItem = menu.findItem(R.id.btn_action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setQueryHint("Nhập liên hệ cần tìm");
+        searchView.setQueryHint("Nhập liên hệ cần tìm");
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -81,7 +67,7 @@ public class MainActivity extends AppCompatActivity  {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                adapterDanhBa.getFilter().filter(newText);
+                contactAdapter.getFilter().filter(newText);
                 return false;
             }
         });
@@ -101,34 +87,34 @@ public class MainActivity extends AppCompatActivity  {
 
 
     private void addEvents() {
-        adapterDanhBa.setOnItemClickListener(new DanhBaAdapterRecycleView.OnItemClickListener() {
+        contactAdapter.setOnItemClickListener(new ContactAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                xuLyMoManHinhDetalis(arrDanhBa.get(position));
+                openDetailsActivity(listContact.get(position));
             }
         });
 
-        btn_action_add.setOnClickListener(new View.OnClickListener() {
+        buttonAddNewContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                xuLyMoManHinhThemLienHe();
+                openAddNewContactAtivity();
             }
         });
     }
 
-    private void xuLyMoManHinhThemLienHe() {
+    private void openAddNewContactAtivity() {
         Intent intent = new Intent(MainActivity.this, AddNewContactActivity.class);
         startActivity(intent);
     }
 
-    private void xuLyMoManHinhDetalis(DanhBa ct) {
+    private void openDetailsActivity(Contact ct) {
         try {
             Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
             Bundle bundle = new Bundle();
-            bundle.putString(HOTEN, ct.getHoTen());
-            bundle.putString(NHOM, ct.getNhom());
-            bundle.putString(SODIENTHOAI, ct.getSoDienThoai());
-            bundle.putBoolean(THICH, ct.isThich());
+            bundle.putString(NAME, ct.getName());
+            bundle.putString(GROUP, ct.getGroup());
+            bundle.putString(PHONE_NUMBER, ct.getPhoneNumber());
+            bundle.putBoolean(LIKE, ct.isLike());
             intent.putExtra(BUNDLE, bundle);
             startActivity(intent);
         } catch (Exception ex) {
@@ -138,38 +124,38 @@ public class MainActivity extends AppCompatActivity  {
 
     private void addControls() {
         try {
-            arrDanhBa = new ArrayList<>();
-            arrDanhBa = getContactList();
-            rvDanhBa = findViewById(R.id.rvDAnhBa);
-            adapterDanhBa = new DanhBaAdapterRecycleView(arrDanhBa);
+            listContact = new ArrayList<>();
+            listContact = getContactList();
+            recyclerViewContact = findViewById(R.id.recyclerViewContact);
+            contactAdapter = new ContactAdapter(listContact);
             layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
             DividerItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
-            rvDanhBa.setHasFixedSize(true);
-            rvDanhBa.setLayoutManager(layoutManager);
-            rvDanhBa.addItemDecoration(itemDecoration);
-            rvDanhBa.setAdapter(adapterDanhBa);
-            btn_action_add = findViewById(R.id.btn_action_add);
-            adapterDanhBa.notifyDataSetChanged();
+            recyclerViewContact.setHasFixedSize(true);
+            recyclerViewContact.setLayoutManager(layoutManager);
+            recyclerViewContact.addItemDecoration(itemDecoration);
+            recyclerViewContact.setAdapter(contactAdapter);
+            buttonAddNewContact = findViewById(R.id.buttonAddNewContact);
+            contactAdapter.notifyDataSetChanged();
         } catch (Exception ex) {
             Toast.makeText(this, ex.toString(), Toast.LENGTH_LONG).show();
         }
     }
 
-    private ArrayList<DanhBa> getContactList() {
-        ArrayList<DanhBa> ds = new ArrayList<>();
+    private ArrayList<Contact> getContactList() {
+        ArrayList<Contact> ds = new ArrayList<>();
         initPermission();
         try {
             Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
             while (phones.moveToNext()) {
                 String name = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
                 String phoneNumber = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                ds.add(new DanhBa(name, phoneNumber));
+                ds.add(new Contact(name, phoneNumber));
             }
             phones.close();
         } catch (Exception ex) {
             Log.i("Read Contact Data", ex.toString());
         }
-        sapXepDanhBa(ds);
+        sortListContact(ds);
         return ds;
     }
 
@@ -206,12 +192,12 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-    public void sapXepDanhBa(ArrayList<DanhBa> arrayList) {
+    public void sortListContact(ArrayList<Contact> arrayList) {
 
-        Collections.sort(arrayList, new Comparator<DanhBa>() {
+        Collections.sort(arrayList, new Comparator<Contact>() {
             @Override
-            public int compare(DanhBa o1, DanhBa o2) {
-                return o1.getHoTen().compareTo(o2.getHoTen());
+            public int compare(Contact o1, Contact o2) {
+                return o1.getName().compareTo(o2.getName());
             }
         });
     }

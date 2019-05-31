@@ -7,26 +7,17 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.model.DanhBa;
-
-import static com.example.projectdanhba_20135557.MainActivity.BUNDLE;
-import static com.example.projectdanhba_20135557.MainActivity.HOTEN;
-import static com.example.projectdanhba_20135557.MainActivity.NHOM;
-import static com.example.projectdanhba_20135557.MainActivity.SODIENTHOAI;
-import static com.example.projectdanhba_20135557.MainActivity.THICH;
+import com.example.model.Contact;
 
 public class AddNewContactActivity extends AppCompatActivity {
-    ImageButton btn_action_go_back, btn_action_create, btn_action_takePhoto;
-    TextView txtTaoLienHe;
-    EditText etHoTen, etSoDienThoai, etNhom;
-    CheckBox cboUaThich;
+    ImageButton buttonGoBack, buttonCreate, buttonTakePhoto;
+    TextView textViewAddNewContact;
+    EditText editTextName, editTextPhoneNumber, editTextGroups;
+    CheckBox checkBoxLike;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,62 +27,62 @@ public class AddNewContactActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
-        btn_action_go_back.setOnClickListener(new View.OnClickListener() {
+        buttonGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                veManHinhChinh();
+                goBackToMainActivity();
             }
         });
-        btn_action_takePhoto.setOnClickListener(new View.OnClickListener() {
+        buttonTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                layAnhTuThietBi();
+                getPhotosFromDevice();
             }
         });
-        btn_action_create.setOnClickListener(new View.OnClickListener() {
+        buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                taoLienHeMoi();
+                addNewContact();
             }
         });
     }
 
-    private void taoLienHeMoi() {
-        DanhBa ct = new DanhBa();
-        ct.setHoTen(etHoTen.getText().toString());
-        ct.setSoDienThoai(etSoDienThoai.getText().toString());
-        ct.setNhom(etNhom.getText().toString());
-        if (cboUaThich.isChecked()) {
-            ct.setThich(true);
+    private void addNewContact() {
+        Contact ct = new Contact();
+        ct.setName(editTextName.getText().toString());
+        ct.setPhoneNumber(editTextPhoneNumber.getText().toString());
+        ct.setGroup(editTextGroups.getText().toString());
+        if (checkBoxLike.isChecked()) {
+            ct.setLike(true);
         } else {
-            ct.setThich(false);
+            ct.setLike(false);
         }
         Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
         intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
-        intent.putExtra(ContactsContract.Intents.Insert.PHONETIC_NAME,etHoTen.getText());
-        intent.putExtra(ContactsContract.Intents.Insert.PHONE, etSoDienThoai.getText());
-        intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, etNhom.getText());
+        intent.putExtra(ContactsContract.Intents.Insert.PHONETIC_NAME, editTextName.getText());
+        intent.putExtra(ContactsContract.Intents.Insert.PHONE, editTextPhoneNumber.getText());
+        intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, editTextGroups.getText());
         startActivity(intent);
     }
 
 
-    private void layAnhTuThietBi() {
+    private void getPhotosFromDevice() {
 
     }
 
-    private void veManHinhChinh() {
+    private void goBackToMainActivity() {
         Intent intent = new Intent(AddNewContactActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
     private void addControls() {
-        btn_action_create = findViewById(R.id.btn_action_create);
-        btn_action_go_back = findViewById(R.id.btn_go_back);
-        btn_action_takePhoto = findViewById(R.id.btn_action_take_photo);
-        txtTaoLienHe = findViewById(R.id.txtTaoLienHe);
-        etHoTen = findViewById(R.id.etHoTen);
-        etNhom = findViewById(R.id.etNhom);
-        etSoDienThoai = findViewById(R.id.etSoDienThoai);
-        cboUaThich = findViewById(R.id.cboUaThich);
+        buttonCreate = findViewById(R.id.btn_action_create);
+        buttonGoBack = findViewById(R.id.btn_go_back);
+        buttonTakePhoto = findViewById(R.id.buttonTakePhoto);
+        textViewAddNewContact = findViewById(R.id.textViewAddContact);
+        editTextName = findViewById(R.id.editTextName);
+        editTextGroups = findViewById(R.id.editTextGroup);
+        editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
+        checkBoxLike = findViewById(R.id.checkBoxLike);
     }
 }

@@ -2,99 +2,110 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
-    plugin-version="3.4.0"
-    timestamp="1555653585825"
-    token="6371028399530838956"
-    verifier="COLD_SWAP_REQUESTED" >
+    plugin-version="3.4.1"
+    timestamp="1559293864183"
+    token="-8136331982846982405"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="504" />
+        duration="5227" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="11" />
+        duration="750" />
     <task
         name="verifier"
-        duration="3" />
+        duration="944" />
 
     <artifact
-        location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
         type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1555651121649"
+        timestamp="1559293864183"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="C:\Users\84982\Desktop\DanhBa\Android_AppDanhBa\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1555653388914"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1555653585825"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Public\projectDanhBa_20135557\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>

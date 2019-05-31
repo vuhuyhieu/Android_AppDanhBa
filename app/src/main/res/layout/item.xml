@@ -8,7 +8,7 @@
     android:orientation="horizontal">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imgAvatar"
+        android:id="@+id/imageViewAvatar_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="clip_horizontal"
@@ -17,25 +17,24 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-
         android:layout_weight="1"
         android:gravity="center_horizontal">
 
         <TextView
-            android:id="@+id/txtHoTen_item"
+            android:id="@+id/textViewName_item"
             android:layout_width="331dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:gravity="fill_vertical"
-            android:hint="Họ tên liên hệ trong danh bạ"
+            android:hint="@string/full_name"
             android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/cboIsChecked"
+        android:id="@+id/checkBoxIsLiked"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 </LinearLayout>

@@ -1,12 +1,8 @@
 package com.example.projectdanhba_20135557;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -15,20 +11,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.model.DanhBa;
+import com.example.model.Contact;
 
-import static com.example.projectdanhba_20135557.MainActivity.HOTEN;
-import static com.example.projectdanhba_20135557.MainActivity.MACT;
-import static com.example.projectdanhba_20135557.MainActivity.NHOM;
-import static com.example.projectdanhba_20135557.MainActivity.SODIENTHOAI;
-import static com.example.projectdanhba_20135557.MainActivity.THICH;
+import static com.example.projectdanhba_20135557.MainActivity.NAME;
+import static com.example.projectdanhba_20135557.MainActivity.GROUP;
+import static com.example.projectdanhba_20135557.MainActivity.PHONE_NUMBER;
+import static com.example.projectdanhba_20135557.MainActivity.LIKE;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    ImageView imageViewAvartar,imgLike;
-    TextView txtHoTen;
-    ImageButton btn_action_dial;
-    TextView txtSoDienThoai, txtNhom;
+    ImageView imageViewAvatar, imageViewLike;
+    TextView textViewName;
+    ImageButton buttonCall;
+    TextView textViewPhoneNumber, textViewGroups;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,17 +33,17 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
-        btn_action_dial.setOnClickListener(new View.OnClickListener() {
+        buttonCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                xuLyNutGoi();
+                makeCall();
             }
         });
     }
 
-    private void xuLyNutGoi() {
+    private void makeCall() {
         try {
-            Uri uri = Uri.parse("tel:" + txtSoDienThoai.getText().toString());
+            Uri uri = Uri.parse("tel:" + textViewPhoneNumber.getText().toString());
             Intent intent = new Intent(Intent.ACTION_CALL, uri);
             if (intent.resolveActivity(getPackageManager())!=null) {
                 startActivity(intent);
@@ -59,34 +54,34 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void addControls() {
-        btn_action_dial = findViewById(R.id.btn_action_call);
-        imageViewAvartar = findViewById(R.id.imageViewAvartar);
-        txtHoTen = findViewById(R.id.txtHoTen);
-        txtSoDienThoai = findViewById(R.id.txtSoDienThoai);
-        txtNhom = findViewById(R.id.txtNhom);
-        imgLike = findViewById(R.id.imgLike);
+        buttonCall = findViewById(R.id.btn_action_call);
+        imageViewAvatar = findViewById(R.id.imageViewAvatar);
+        textViewName = findViewById(R.id.textViewName);
+        textViewPhoneNumber = findViewById(R.id.textViewPhoneNumber);
+        textViewGroups = findViewById(R.id.textViewGroup);
+        imageViewLike = findViewById(R.id.imageViewLike);
         Intent intent = getIntent();
         Bundle bundle;
-        DanhBa ct = new DanhBa();
+        Contact ct = new Contact();
         if (intent!=null){
             bundle = intent.getBundleExtra(MainActivity.BUNDLE);
-            ct.setHoTen(bundle.getString(HOTEN));
-            ct.setSoDienThoai(bundle.getString(SODIENTHOAI));
-            ct.setNhom(bundle.getString(NHOM));
-            ct.setThich(bundle.getBoolean(THICH));
-            txtHoTen.setText(ct.getHoTen());
-            txtSoDienThoai.setText(ct.getSoDienThoai());
-            txtNhom.setText(ct.getNhom());
-            if (ct.isThich()){
-                imgLike.setVisibility(View.VISIBLE);
+            ct.setName(bundle.getString(NAME));
+            ct.setPhoneNumber(bundle.getString(PHONE_NUMBER));
+            ct.setGroup(bundle.getString(GROUP));
+            ct.setLike(bundle.getBoolean(LIKE));
+            textViewName.setText(ct.getName());
+            textViewPhoneNumber.setText(ct.getPhoneNumber());
+            textViewGroups.setText(ct.getGroup());
+            if (ct.isLike()){
+                imageViewLike.setVisibility(View.VISIBLE);
             }
             else{
-                imgLike.setVisibility(View.INVISIBLE);
+                imageViewLike.setVisibility(View.INVISIBLE);
             }
         }
         else {
             Toast.makeText(this,"Intent is empty",Toast.LENGTH_LONG).show();
         }
-        imageViewAvartar.setImageResource(R.drawable.ic_avartar_96dp);
+        imageViewAvatar.setImageResource(R.drawable.ic_avartar_96dp);
     }
 }
