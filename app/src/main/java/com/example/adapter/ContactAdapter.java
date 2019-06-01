@@ -38,12 +38,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView textViewName;
-        public ImageView imageViewAvartar;
+        public ImageView imageViewAvatar;
         public CheckBox checkBoxIsLiked;
         public ViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.textViewName_item);
-            imageViewAvartar = itemView.findViewById(R.id.imageViewAvatar_item);
+            imageViewAvatar = itemView.findViewById(R.id.imageViewAvatar_item);
             checkBoxIsLiked = itemView.findViewById(R.id.checkBoxIsLiked);
             checkBoxIsLiked.setVisibility(View.INVISIBLE);
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textViewName.setText(listContact.get(position).getName());
-        holder.imageViewAvartar.setImageResource(R.drawable.ic_circled_a_48dp);
+        holder.imageViewAvatar.setImageResource(R.drawable.ic_circled_a_48dp);
 
 }
 

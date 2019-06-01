@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity  {
     ContactAdapter contactAdapter;
     FloatingActionButton buttonAddNewContact;
 //    public static final String MACT = "mact";
-    public static final String NAME = "hoten";
-    public static final String PHONE_NUMBER = "sodienthoai";
-    public static final String GROUP = "nhom";
-    public static final String LIKE = "thich";
+    public static final String NAME = "name";
+    public static final String PHONE_NUMBER = "phone_number";
+    public static final String GROUP = "group";
+    public static final String LIKE = "like";
     public static final String BUNDLE = "bundle";
 
     @Override
