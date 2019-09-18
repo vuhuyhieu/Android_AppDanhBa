@@ -176,38 +176,29 @@ public class MainActivity extends AppCompatActivity  {
     public void initPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-
-                //Permisson don't granted
                 if (shouldShowRequestPermissionRationale(
                         Manifest.permission.READ_CONTACTS)) {
                     Toast.makeText(MainActivity.this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
                 }
-                // Permisson don't granted and dont show dialog again.
                 else {
                     Toast.makeText(MainActivity.this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
                 }
-                //Register permission
                 requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, 1);
             }
             if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                //Permisson don't granted
                 if (shouldShowRequestPermissionRationale(
                         Manifest.permission.CALL_PHONE)) {
                     Toast.makeText(MainActivity.this, "Permission isn't granted ", Toast.LENGTH_SHORT).show();
                 }
-                // Permisson don't granted and dont show dialog again.
                 else {
                     Toast.makeText(MainActivity.this, "Permisson don't granted and dont show dialog again ", Toast.LENGTH_SHORT).show();
                 }
-                //Register permission
                 requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 1);
             }
         }
     }
 
     public void sapXepDanhBa(ArrayList<DanhBa> arrayList) {
-
         Collections.sort(arrayList, new Comparator<DanhBa>() {
             @Override
             public int compare(DanhBa o1, DanhBa o2) {
